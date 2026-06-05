@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://155xx7s6y6ta"]
+
+[ext_resource type="PackedScene" uid="uid://cjmsxlfrbv1u2" path="res://scenes/bg.tscn" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cu07t58c85orw" path="res://scenes/ground.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://cl30os22dak10" path="res://scenes/jeepney.tscn" id="3_tbgi4"]
+
+[node name="Main" type="Node" unique_id=1678269497]
+
+[node name="Bg" parent="." unique_id=591084708 instance=ExtResource("1_sugp2")]
+
+[node name="Ground" parent="." unique_id=282233790 instance=ExtResource("2_jyhfs")]
+position = Vector2(0, 360)
+
+[node name="Jeepney" parent="." unique_id=693691343 instance=ExtResource("3_tbgi4")]
+position = Vector2(224, 880)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=243367270]
+position = Vector2(972, 546)

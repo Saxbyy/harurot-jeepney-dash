@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://cl30os22dak10"]
+
+[ext_resource type="Script" uid="uid://mvta8nb3s1im" path="res://jeepney.gd" id="1_b80sj"]
+[ext_resource type="Texture2D" uid="uid://bgk6vxnx6u0q8" path="res://assets/img/jeepney/710794463_1013139858073293_4703368772398550141_n.png" id="1_rarbv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b80sj"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(0, 140, 128, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulp76"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(128, 140, 128, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h5j8"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(256, 140, 128, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uw3e4"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(384, 140, 128, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jm4cd"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(512, 140, 128, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhxpp"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(640, 140, 128, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5gc6"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(768, 140, 128, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5pk3"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(896, 140, 128, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fj8eu"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(0, 0, 128, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0irpj"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(128, 0, 128, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvb82"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(256, 0, 128, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kadwb"]
+atlas = ExtResource("1_rarbv")
+region = Rect2(384, 0, 128, 140)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rndn1"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_b80sj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulp76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h5j8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uw3e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jm4cd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhxpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5gc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5pk3")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fj8eu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0irpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvb82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kadwb")
+}],
+"loop": true,
+"name": &"running",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mn4jq"]
+size = Vector2(37.085938, 18.453125)
+
+[node name="Jeepney" type="CharacterBody2D" unique_id=693691343]
+z_index = 1
+scale = Vector2(8, 8)
+script = ExtResource("1_b80sj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1410058745]
+texture_filter = 1
+position = Vector2(-0.625, -9.75)
+scale = Vector2(0.39723223, 0.42375374)
+sprite_frames = SubResource("SpriteFrames_rndn1")
+animation = &"jump"
+autoplay = "running"
+frame = 5
+frame_progress = 0.99560446
+
+[node name="RunCol" type="CollisionShape2D" parent="." unique_id=725929459]
+position = Vector2(-0.75, -7.75)
+shape = SubResource("RectangleShape2D_mn4jq")

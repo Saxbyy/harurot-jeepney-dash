@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cu07t58c85orw"]
+
+[ext_resource type="Texture2D" uid="uid://bt0a2gfn3e1x5" path="res://assets/img/background/road&lamps.png" id="1_pybca"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlmr7"]
+size = Vector2(1928, 188.5)
+
+[node name="Ground" type="StaticBody2D" unique_id=282233790]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=884492840]
+position = Vector2(4, -363)
+texture = ExtResource("1_pybca")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=936762608]
+position = Vector2(964, 622.25)
+shape = SubResource("RectangleShape2D_nlmr7")
